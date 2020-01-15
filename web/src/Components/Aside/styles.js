@@ -4,7 +4,9 @@ export const Container = styled.aside`
   background: #fff;
   padding: 30px;
   border-radius: 7px;
-  width: 25%;
+  width: 40%;
+  height: 400px;
+  margin-right: 60px;
 
   p {
     text-align: center;
