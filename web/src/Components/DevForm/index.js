@@ -2,12 +2,9 @@ import React, { useState, useEffect } from "react";
 
 import { Container, Form, InputBlock, InputGroup } from "./styles";
 
-import api from "../../services/api";
-
-export default function Aside() {
+export default function DevForm({ onSubmit }) {
   const [github_username, setGithubUsername] = useState("");
   const [techs, setTechs] = useState("");
-
   const [latitude, setLatitude] = useState("");
   const [longitude, setLongitude] = useState("");
 
@@ -28,22 +25,19 @@ export default function Aside() {
     );
   }, []);
 
-  async function handleAddDev(e) {
+  async function handleSubmit(e) {
     e.preventDefault();
-    const response = await api.post("/devs", {
-      github_username,
-      techs,
-      latitude,
-      longitude
-    });
+
+    await onSubmit({ github_username, techs, latitude, longitude });
+
     setGithubUsername("");
     setTechs("");
   }
 
   return (
     <Container>
-      <p>Cadastrar</p>
-      <Form onSubmit={handleAddDev}>
+      <Form onSubmit={handleSubmit}>
+        <p>Cadastrar</p>
         <InputBlock>
           <label htmlFor="github_username">Usuário do github</label>
           <input

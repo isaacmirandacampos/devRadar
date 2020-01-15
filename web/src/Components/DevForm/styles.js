@@ -4,7 +4,7 @@ export const Container = styled.aside`
   background: #fff;
   padding: 30px;
   border-radius: 7px;
-  width: 40%;
+  width: 30%;
   height: 400px;
   margin-right: 60px;
 
@@ -34,13 +34,15 @@ export const Container = styled.aside`
 
 export const Form = styled.form`
   width: 100%;
+  height: 100%;
 `;
 
 export const InputBlock = styled.div`
   margin: 10px 0;
+  display: flex;
+  flex-direction: column;
 
   label {
-    display: block;
     font-size: 15px;
     font-weight: bold;
     color: #acacac;

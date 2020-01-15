@@ -1,13 +1,5 @@
 import styled from "styled-components";
 
-export const Container = styled.ul.attrs({})`
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 20px;
-  list-style: none;
-  overflow: auto;
-`;
-
 export const Profile = styled.li`
   width: 100%;
   height: 200px;
@@ -30,9 +22,10 @@ export const Profile = styled.li`
 
     div {
       margin-left: 10px;
+      display: flex;
+      flex-direction: column;
 
       strong {
-        display: block;
         color: #333;
         font-size: 16px;
       }

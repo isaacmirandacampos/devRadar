@@ -6,4 +6,12 @@ export const Container = styled.div`
   justify-content: space-between;
   width: 90%;
   margin: 50px auto;
+
+  div.dev {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    list-style: none;
+    overflow: auto;
+  }
 `;
