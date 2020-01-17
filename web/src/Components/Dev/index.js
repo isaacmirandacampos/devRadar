@@ -9,7 +9,7 @@ export default function Dev({ data: dev }) {
         <img src={dev.avatar_url} alt={dev.name} />
         <div>
           <strong>{dev.name}</strong>
-          <span>{dev.techs}</span>
+          <span>{dev.techs.join(", ")}</span>
         </div>
       </header>
       <div>
