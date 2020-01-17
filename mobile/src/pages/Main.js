@@ -53,7 +53,6 @@ export default function Main({ navigation }) {
     });
     setDevs(response.data);
   }
-  console.log(devs.map(dev => dev.location.coordinates[0]));
 
   function handleRegionChange(region) {
     setCurrentRegion(region);
